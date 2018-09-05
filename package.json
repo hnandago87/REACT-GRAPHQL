@@ -61,13 +61,13 @@
   "testEnvironment": "node",
   "jest": {
     "testURL": "http://localhost",
-    "moduleNameMapper":{
-            "\\.(css|less|sass|scss)$": "<rootDir>/__mock__/styleMock.js"
-      }
+    "moduleNameMapper": {
+      "\\.(css|less|sass|scss)$": "<rootDir>/__mock__/styleMock.js"
+    }
   },
   "scripts": {
-    "build": "webpack",
-    "start": "webpack-dev-server --open",
+    "build": "webpack && npm run start",
+    "start": "node server.js",
     "build:dev": "webpack --env=dev --progress --profile --colors",
     "build:dist": "webpack --env=prod --progress --profile --colors",
     "test": "jest",
